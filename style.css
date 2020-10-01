@@ -43,17 +43,38 @@ body{
     -moz-box-shadow: 10px 16px 16px rgba(0, 0, 0, 0.3);
     box-shadow: 10px 16px 16px rgba(0, 0, 0, 0.3);
     font-family: 'Poppins', sans-serif;
-
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1.25);
 }
 
 .profile-image-card{
-    margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 150px;
+    height: 150px;
+    margin: 45px auto 0;
+    padding: 8px;
+    border: 2px solid #9273cd;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-image-card:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 1px solid #9273cd;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+    animation: wave 1.5s infinite linear;
 }
 
 .profile-image{
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 
 }
 
@@ -113,4 +134,11 @@ body{
 .credits{
     margin: 10px auto;
     font-family: 'Poppins', sans-serif;
+}
+
+@keyframes wave{
+    to{
+        transform: scale(1.5);
+        opacity: 0;
+    }
 }
